@@ -5,6 +5,11 @@ import maya.cmds as cmds
 import maya.OpenMayaUI as omui
 
 import lib
+try:    # noinspection PyUnresolvedReferences,PyUnboundLocalVariable
+    long
+except NameError:   # Python 3 compatibility
+    long = int
+    unicode = str
 
 Wgt_instance = None
 j_num = 4
